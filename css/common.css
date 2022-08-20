@@ -30,3 +30,14 @@ button {
 
  
 }
+
+
+.valid {
+  border-color: #4caf50;
+ 
+}
+
+.invalid {
+  border-color: #f44336;
+  
+}
