@@ -1,6 +1,7 @@
 const form = document.querySelector(".login-form");
 
 form.addEventListener("submit", onFormSubmit);
+const array = [];
 
 function onFormSubmit(event) {
   event.preventDefault();
@@ -10,10 +11,11 @@ function onFormSubmit(event) {
 
   if (emailEl === "" || passwordEl === "") {
     alert("applay the form");
-        return;
+    return;
   }
   const formData = new FormData(event.currentTarget);
 
+  
   formData.forEach((value, name) => {
     // console.log(formData);
     // console.log("name:", name);
@@ -21,11 +23,8 @@ function onFormSubmit(event) {
 
     const dataForm = `${name}: ${value}`;
     console.log(dataForm);
-
-    form.reset()
+    form.reset();
 
     return dataForm;
   });
-  
 }
-  

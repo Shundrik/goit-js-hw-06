@@ -1,5 +1,5 @@
 const inputRef = document.querySelector("#validation-input");
-console.log(inputRef);
+// console.log(inputRef);
 
 // const colors = document.querySelector("style");
 // console.log(colors.textContent);
@@ -14,13 +14,15 @@ console.log(inputRef);
 // console.log(colorRed);
 
 const inputValueEl = inputRef.addEventListener("blur", onCheckInput);
-console.log(inputValueEl);
+
 
 function onCheckInput(event) {
+  console.log(event);
   event.currentTarget.value;
   
   if (event.currentTarget.value.length === +inputRef.dataset.length) {
-     return inputRef.classList.add("valid") 
+
+    return inputRef.classList.replace("invalid","valid") 
   }
-  return inputRef.classList.add("invalid")
+   return inputRef.classList.add("invalid",)
 }

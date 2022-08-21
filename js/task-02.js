@@ -15,5 +15,5 @@ const liEl = ingredients.map((item) => {
 });
 
 const ulEl = document.querySelector("#ingredients");
-console.log(ulEl);
+// console.log(ulEl);
 ulEl.append(...liEl);
