@@ -10,21 +10,14 @@ function onFormSubmit(event) {
   const passwordEl = event.currentTarget.password.value;
 
   if (emailEl === "" || passwordEl === "") {
+    
     alert("applay the form");
+  }
+    else {
+      console.log( {email: emailEl, password:passwordEl});
+      form.reset();
+
+    }
     return;
   }
-  const formData = new FormData(event.currentTarget);
 
-  
-  formData.forEach((value, name) => {
-    // console.log(formData);
-    // console.log("name:", name);
-    // console.log("value:", value);
-
-    const dataForm = `${name}: ${value}`;
-    console.log(dataForm);
-    form.reset();
-
-    return dataForm;
-  });
-}

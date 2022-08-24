@@ -15,14 +15,15 @@ const inputRef = document.querySelector("#validation-input");
 
 const inputValueEl = inputRef.addEventListener("blur", onCheckInput);
 
-
 function onCheckInput(event) {
   console.log(event);
   event.currentTarget.value;
-  
-  if (event.currentTarget.value.length === +inputRef.dataset.length) {
 
-    return inputRef.classList.replace("invalid","valid") 
+  if (event.currentTarget.value.length !== +inputRef.dataset.length) {
+    inputRef.classList.add("invalid");
+    inputRef.classList.remove("valid");
+    return;
+  } else if (inputRef.classList.value.includes("invalid")) {
+    inputRef.classList.replace("invalid", "valid");
   }
-   return inputRef.classList.add("invalid",)
 }
