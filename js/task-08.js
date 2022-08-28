@@ -1,15 +1,26 @@
 const form = document.querySelector(".login-form");
 
 form.addEventListener("submit", onFormSubmit);
+console.log(form.elements);
 
 function onFormSubmit(event) {
   event.preventDefault();
 
+// 1 var
   // const emailEl = event.currentTarget.email.value;
   // const passwordEl = event.currentTarget.password.value;
 
-  const emailEl = document.querySelector("input[name=email]");
-  const passwordEl = document.querySelector("input[name=password]");
+  // 2 var
+  // const emailEl = document.querySelector("input[name=email]");
+  // const passwordEl = document.querySelector("input[name=password]");
+ 
+  // 3 var
+  // const emailEl = form[0];
+  // const emailEl = form[1];
+
+  // 4 var
+  const emailEl = form.elements.email;
+  const passwordEl = form.elements.password;
 
   if (emailEl.value === "" || passwordEl.value === "") {
     alert("applay the form");
@@ -19,6 +30,15 @@ function onFormSubmit(event) {
   }
   return;
 }
+
+
+
+
+
+
+
+
+// --- 2 var
 
 // const form = document.querySelector('.login-form');
 
